@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #07090d;
+  --color-bg-elevated: #0c1016;
+  --color-surface: #121821;
+  --color-surface-hover: #18202b;
+  --color-line: rgba(232, 236, 241, 0.08);
+  --color-line-strong: rgba(232, 236, 241, 0.16);
+  --color-ink: #e8ecf1;
+  --color-muted: #8b95a5;
+  --color-faint: #5e6774;
+  --color-gold: #d4a853;
+  --color-gold-soft: #e4c27a;
+  --color-cyan: #7ee0d2;
+  --color-mobility: #6aa8d8;
+  --color-benefits: #d4a853;
+  --color-cp: #6b7280;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(212, 168, 83, 0.28);
+  color: #fff8e8;
+}
+
+.display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.mesh {
+  background:
+    radial-gradient(900px 520px at 12% -10%, rgba(212, 168, 83, 0.09), transparent 55%),
+    radial-gradient(800px 480px at 92% 8%, rgba(126, 224, 210, 0.07), transparent 50%),
+    radial-gradient(700px 400px at 50% 100%, rgba(106, 168, 216, 0.05), transparent 55%),
+    var(--color-bg);
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(rgba(232, 236, 241, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 236, 241, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 88%);
+}
+
+.hairline {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 168, 83, 0.55),
+    rgba(126, 224, 210, 0.45),
+    transparent
+  );
+}
