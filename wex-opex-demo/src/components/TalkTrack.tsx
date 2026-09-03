@@ -7,10 +7,10 @@ export function TalkTrack() {
   const [copied, setCopied] = useState(false);
 
   async function copyAll() {
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2500);
     try {
       await navigator.clipboard.writeText(talkTrackCopy);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
     } catch {
       setCopied(false);
     }
@@ -31,7 +31,12 @@ export function TalkTrack() {
           <button
             type="button"
             onClick={copyAll}
-            className="inline-flex items-center justify-center rounded-full border border-line bg-surface px-4 py-2 text-[13px] font-medium text-ink transition-colors hover:border-line-strong hover:bg-surface-hover"
+            aria-live="polite"
+            className={`inline-flex min-w-[108px] items-center justify-center rounded-full border px-4 py-2 text-[13px] font-medium transition-colors ${
+              copied
+                ? "border-gold/40 bg-gold/15 text-gold-soft"
+                : "border-line bg-surface text-ink hover:border-line-strong hover:bg-surface-hover"
+            }`}
           >
             {copied ? "Copied" : "Copy all"}
           </button>

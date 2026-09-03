@@ -25,6 +25,13 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+For a live screen-share, prefer the production server so the page is static and quiet:
+
+```bash
+npm run build
+npm start
+```
+
 ## Production build
 
 ```bash
