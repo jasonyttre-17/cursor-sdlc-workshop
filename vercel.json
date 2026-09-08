@@ -1,0 +1,6 @@
+{
+  "installCommand": "npm install --prefix projects/jasonyttre-17/base_mvp",
+  "buildCommand": "npm run build --prefix projects/jasonyttre-17/base_mvp",
+  "outputDirectory": "projects/jasonyttre-17/base_mvp/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
