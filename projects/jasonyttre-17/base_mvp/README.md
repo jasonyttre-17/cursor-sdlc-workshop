@@ -12,6 +12,15 @@ npm run dev
 
 Open [http://localhost:5180](http://localhost:5180) in your browser.
 
+## Deploy on Vercel
+
+1. In Vercel → **Add New Project** → import `jasonyttre-17/cursor-sdlc-workshop`.
+2. Set **Root Directory** to `projects/jasonyttre-17/base_mvp` (required — the app is not at the repo root).
+3. Framework should auto-detect **Vite**. Build: `npm run build`, output: `dist`.
+4. Deploy. Vercel gives you a live URL like `your-project.vercel.app`.
+
+Use branch `cursor/money-fades-booking-acc1` (or `main` after the PR merges) as the production branch.
+
 ## How it works
 
 1. **Service** — Pick a cut (prices shown upfront).
